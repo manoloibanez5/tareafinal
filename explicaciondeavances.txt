@@ -1,0 +1,9 @@
+He conseguido que las ventas se guarden en la tabla ventas. Mediante una consulta preparada para que haga un insert into en esa tabla.
+He conseguido arreglar un error que tenia al hacer clic en eliminar en el carrito.
+El usuario invitado que es aquel que no necesita loguearse en la página para añadir productos al carrito lo he realizado con éxito.
+La parte de diseño de la página esta finalizado porque he dividido los productos por tipo de producto y
+he organizado las páginas por productos y se guardan los productos en la base de datos con sus imagenes, precio y descripción.
+Analizando el código me di cuenta de que donde debia de poner el id en mayuscula la puse en minuscula y lo cambié y ya me funcionó.
+Me queda realizar los usuarios administrador y registrado, sesiones y registro, las cookies y
+por último la programacion orientada a objetos.
+Estimo que para la finalizacion del proyecto necesitare una semana más es decir hasta el día 12/05/2020.
