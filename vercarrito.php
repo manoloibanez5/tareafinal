@@ -28,7 +28,7 @@ if(!empty($_SESSION["CARRITO"])){
             <td width="20%" class="text-center"><?php echo number_format($producto["precio"]*$producto["cantidad"],2); ?>€</td>
             <td width="5%">
                 <form action="" method="post"> 
-                    <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($producto['id'],COD,KEY); ?>">   
+                    <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($producto['ID'],COD,KEY); ?>">   
                     <button class="btn btn-danger" type="submit" name="btnAccion" value="Eliminar">Eliminar</button>
                 </form>
             </td>
@@ -41,6 +41,23 @@ if(!empty($_SESSION["CARRITO"])){
             <td colspan="3" align="right"><h3>Total</h3></td>
             <td align="right"><h3><?php echo number_format($total,2); ?>€</h3></td>
             <td></td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <form action="pagar.php" method="post">
+                    <div class="alert alert-primary" role="alert">
+                        <div class="form-group">
+                            <label for="my-input">Correo de contacto</label>
+                            <input id="email" name="email" class="form-control" type="email" placeholder="Escribe tu correo aqui" required>
+                        </div>
+                        <small id="emailHelp" class="form-text text-muted">
+                            Los productos se enviaran a este correo
+                        </small>
+                    </div>
+                    <button class="btn btn-primary btn-lg btn-block" type="submit" name="btnAccion" value="proceder">Pagar>></button>
+                </form>
+
+            </td>
         </tr>
     </tbody>
 </table>

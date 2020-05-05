@@ -5,10 +5,10 @@ include "carrito.php";
 include "templates/cabecera.php"
 ?>
 
-	
+	<br>
 	<div class="row">
 		<?php
-			$sentencia=$pdo->prepare("SELECT * FROM `productos`");
+			$sentencia=$pdo->prepare("SELECT * FROM `productos` where tipo='camiseta'");
 			$sentencia->execute();
 			$listaProductos=$sentencia->fetchAll(PDO::FETCH_ASSOC);
 			//print_r($listaProductos);

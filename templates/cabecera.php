@@ -21,14 +21,26 @@
 			<li class="nav-item active">
 				<a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
 			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="botas.php">Botas <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="chandal.php">Chandal <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="camisetas.php">Camisetas <span class="sr-only">(current)</span></a>
+			</li>
 			<li class="nav-item">
                 <a class="nav-link" href="vercarrito.php" tabindex="-1" aria-disabled="true">Carrito(<?php 
                 echo(empty($_SESSION["CARRITO"]))?0:count($_SESSION["CARRITO"]);
                 ?>)</a>
 			</li>
+			
 		</ul>
 	</div>
 </nav>
 <br/>
 <br/>
 <div class="container">
+<br>
+	</div>
