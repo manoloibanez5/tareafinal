@@ -15,7 +15,7 @@ include "templates/cabecera.php"
 		?>
 		<?php foreach($listaProductos as $producto){ ?>
 			<div class="col-3">
-			<div class="card">
+			<div class="card text-white bg-success">
 				<img title="<?php echo $producto['nombre']; ?>" 
 				alt="<?php echo $producto['nombre']; ?>" 
 				class="card-img-top" 

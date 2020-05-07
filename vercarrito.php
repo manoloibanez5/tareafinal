@@ -8,7 +8,7 @@ include "templates/cabecera.php"
 <?php
 if(!empty($_SESSION["CARRITO"])){
 ?>
-<table class="table table-light table-bordered">
+<table class="table table-light table-bordered text-white bg-success">
     <tbody>
         <tr>
             <th width="40%">Descripción</th>
