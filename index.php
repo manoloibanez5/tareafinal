@@ -5,7 +5,7 @@ include "carrito.php";
 include "templates/cabecera.php"
 ?>
 
-	
+	<!--En esta pagina lo que hacemos es mostrar todos los productos que hay en la tabla productos-->
 	<div class="row">
 		<?php
 			$sentencia=$pdo->prepare("SELECT * FROM `productos`");
@@ -25,6 +25,7 @@ include "templates/cabecera.php"
 				data-content="<?php echo $producto['descripcion']; ?>"
 				height="317px"
 				>
+				<!--Aqui realizamos un card body para que aparezcan los productos organizados de la misma forma-->
 				<div class="card-body">
 					<span><?php echo $producto['nombre']; ?></span>
 					<h5 class="card-title"><?php echo $producto['precio']; ?>€</h5>

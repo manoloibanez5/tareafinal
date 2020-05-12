@@ -1,10 +1,13 @@
 <?php
 session_start();
-
+/*Esta pagina sirve para que los botones de Agregar al carrito y
+ eliminar del carrito realicen la accion para la que son destinados */
 $mensaje="";
 if(isset($_POST["btnAccion"])){
     switch($_POST["btnAccion"]){
         case "Agregar":
+            /*Aqui va comprobando todos los datos que vamos a añadir al carrito a
+             ver si son correctos para evitar que alguien pueda cambiar el precio por ejemplo*/
             if (is_numeric(openssl_decrypt($_POST["id"],COD,KEY))) {
                 $ID=openssl_decrypt($_POST["id"],COD,KEY);
                 $mensaje.="Ok ID correcto ".$ID."</br>";
@@ -30,7 +33,7 @@ if(isset($_POST["btnAccion"])){
                 $mensaje.="Cantidad incorrecta "."</br>";
             break;
             }
-            if(!isset($_SESSION["CARRITO"])){
+            if(!isset($_SESSION["CARRITO"])){                
                 $producto=array(
                     "ID"=>$ID,
                     "nombre"=>$nombre,
@@ -41,6 +44,8 @@ if(isset($_POST["btnAccion"])){
             }else {
                 $idProductos=array_column($_SESSION["CARRITO"],"ID");
                 if(in_array($ID,$idProductos)){
+                    /*Este if y este else sirven para que si el producto ya
+                 esta en el carrito que no lo puedan volver a añadir de nuevo*/
                     echo"<script>alert('El producto ya esta en el carrito')</script>";
                 }else{
                 
@@ -57,6 +62,7 @@ if(isset($_POST["btnAccion"])){
             $mensaje=print_r($_SESSION,true);
         break;
         case "Eliminar":
+            /*Esto sirve para que se pueda eliminar un producto del carrito */
             if (is_numeric(openssl_decrypt($_POST["id"],COD,KEY))) {
                 $ID=openssl_decrypt($_POST["id"],COD,KEY);
                 foreach($_SESSION['CARRITO'] as $indice=>$producto){

@@ -4,6 +4,7 @@ include "global/conexion.php";
 include "carrito.php";
 include "templates/cabecera.php"
 ?>
+<!--En esta pagina solo muestra los productos de la tabla productos que sean del tipo botas-->
 
 	<br>
 	<div class="row">

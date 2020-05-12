@@ -5,6 +5,7 @@ include "carrito.php";
 include "templates/cabecera.php"
 ?>
 <?php
+/*Aqui inserta los datos de la compra en la tabla ventas */
 if($_POST){
     $total=0;
     $SID=session_id();
@@ -19,7 +20,7 @@ if($_POST){
     $sentencia->bindParam(":Total",$total);
     $sentencia->execute();
     $idVenta=$pdo->lastInsertId();
-    echo "<h3>". $total ."</h3>";
+    echo "<br><br><h1>Todo correcto el precio Final es:</h1><h3>". $total ."€</h3>";
 }
 ?>
 <?php

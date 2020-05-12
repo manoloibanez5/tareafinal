@@ -6,6 +6,7 @@ include "templates/cabecera.php"
 <br>
 <h3>Lista del carrito</h3>
 <?php
+/*Aqui se muestra una tabla que es el carrito que es lo que vas agregando o eliminando */
 if(!empty($_SESSION["CARRITO"])){
 ?>
 <table class="table table-light table-bordered text-white bg-success">

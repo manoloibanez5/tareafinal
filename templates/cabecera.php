@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!--Este fichero sirve para que no tengamos que estar 
+	poniendo la cabecera de la pagina en todos los ficheros-->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -31,6 +33,12 @@
 			</li>
 			<li class="nav-item active">
 				<a class="nav-link" href="camisetas.php">Camisetas <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="iniciarsesion.php">Iniciar sesión <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="cierre.php">Cerrar sesión <span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item">
                 <a class="nav-link" href="vercarrito.php" tabindex="-1" aria-disabled="true">Carrito(<?php 
